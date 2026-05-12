@@ -4,32 +4,377 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dinesh Sigireddy - Full Stack Java Developer Portfolio" />
 
   <title>Dinesh Sigireddy | Portfolio</title>
 
-  <!-- Google Font -->
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+
+    /* RESET */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #22d3ee;
+      --secondary: #3b82f6;
+      --dark: #0f172a;
+      --card: rgba(255, 255, 255, 0.05);
+      --text: white;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: linear-gradient(to bottom right, #0f172a, #111827, #1e293b);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 4.5rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text span {
+      background: linear-gradient(to right, #22d3ee, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #cbd5e1;
+      margin-bottom: 35px;
+      max-width: 600px;
+    }
+
+    .hero-image img {
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--primary);
+      box-shadow: 0 0 40px rgba(34,211,238,0.4);
+    }
+
+    /* BUTTONS */
+
+    .btn-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .primary-btn {
+      background: linear-gradient(to right, #22d3ee, #3b82f6);
+      color: white;
+    }
+
+    .primary-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .secondary-btn {
+      border: 2px solid var(--primary);
+      color: white;
+    }
+
+    .secondary-btn:hover {
+      background: rgba(34,211,238,0.1);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .section-title p {
+      color: #cbd5e1;
+    }
+
+    /* GRID */
+
+    .about-grid,
+    .skills-grid,
+    .projects-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 30px;
+    }
+
+    /* CARDS */
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      transition: 0.4s ease;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(34,211,238,0.15);
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+    }
+
+    /* SKILLS */
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skill-tags span {
+      background: rgba(34,211,238,0.1);
+      color: var(--primary);
+      padding: 10px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* CONTACT */
+
+    .contact-card p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .contact-card i {
+      color: var(--primary);
+      margin-right: 10px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    form button {
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: #cbd5e1;
+    }
+
+    /* ANIMATION */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 1s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 80px;
+        right: -100%;
+        width: 220px;
+        background: #111827;
+        flex-direction: column;
+        padding: 20px;
+        transition: 0.3s;
+        border-radius: 10px;
+      }
+
+      nav ul.active {
+        right: 20px;
+      }
+
+      .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+      }
+
+      .hero-image img {
+        width: 280px;
+        height: 280px;
+      }
+
+      .btn-group {
+        justify-content: center;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
+
   <header>
+
     <div class="container navbar">
 
       <div class="logo">
-        Dinesh | Full Stack Java Developer
+        Dinesh | Java Developer
       </div>
 
       <nav>
@@ -37,35 +382,46 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
+      <div class="menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+
     </div>
+
   </header>
 
   <!-- HERO -->
+
   <section class="hero" id="home">
 
     <div class="container hero-content">
 
-      <div class="hero-text">
+      <div class="hero-text reveal">
+
         <h1>
-          I'm a <span>Full Stack Java Developer</span>
+          Hi, I'm <span>Dinesh</span><br>
+          Full Stack Java Developer
         </h1>
 
         <p>
-          Passionate Java Developer with strong knowledge in Java,
-          Spring Boot, ReactJS, and database management.
+          Passionate Full Stack Java Developer skilled in Java,
+          Spring Boot, ReactJS, MySQL, and modern web technologies.
+          I love building responsive and user-friendly applications.
         </p>
 
         <div class="btn-group">
-          <a href="#" class="btn primary-btn">View Resume</a>
+          <a href="#" class="btn primary-btn">Download Resume</a>
           <a href="#contact" class="btn secondary-btn">Contact Me</a>
         </div>
+
       </div>
 
-      <div class="hero-image">
+      <div class="hero-image reveal">
         <img src="assets/profile-photo.jpg" alt="Dinesh">
       </div>
 
@@ -74,33 +430,40 @@
   </section>
 
   <!-- ABOUT -->
+
   <section id="about">
 
     <div class="container">
 
-      <div class="section-title">
+      <div class="section-title reveal">
         <h2>About Me</h2>
-        <p>Passionate fresher with strong Full Stack Java Development skills.</p>
+        <p>Know more about my background and experience.</p>
       </div>
 
       <div class="about-grid">
 
-        <div class="about-card">
+        <div class="card reveal">
           <i class="fas fa-user-graduate"></i>
           <h3>Education</h3>
-          <p>Strong academic foundation in programming and software development.</p>
+          <p>
+            Strong academic foundation in programming and software development.
+          </p>
         </div>
 
-        <div class="about-card">
+        <div class="card reveal">
           <i class="fas fa-laptop-code"></i>
           <h3>Training</h3>
-          <p>Completed Full Stack Java Development training at ShiftEdutech.</p>
+          <p>
+            Completed Full Stack Java Development training at ShiftEdutech.
+          </p>
         </div>
 
-        <div class="about-card">
+        <div class="card reveal">
           <i class="fas fa-code"></i>
           <h3>Projects</h3>
-          <p>Built multiple Java desktop and web applications.</p>
+          <p>
+            Built multiple Java and web-based applications using modern technologies.
+          </p>
         </div>
 
       </div>
@@ -110,17 +473,18 @@
   </section>
 
   <!-- SKILLS -->
+
   <section id="skills">
 
     <div class="container">
 
-      <div class="section-title">
+      <div class="section-title reveal">
         <h2>Technical Skills</h2>
       </div>
 
       <div class="skills-grid">
 
-        <div class="skill-card">
+        <div class="card reveal">
           <h3>Frontend</h3>
 
           <div class="skill-tags">
@@ -131,7 +495,7 @@
           </div>
         </div>
 
-        <div class="skill-card">
+        <div class="card reveal">
           <h3>Backend</h3>
 
           <div class="skill-tags">
@@ -142,7 +506,7 @@
           </div>
         </div>
 
-        <div class="skill-card">
+        <div class="card reveal">
           <h3>Database</h3>
 
           <div class="skill-tags">
@@ -157,22 +521,62 @@
 
   </section>
 
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-title reveal">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="card reveal">
+          <h3>Employee Management System</h3>
+          <p>
+            Java + JDBC CRUD application for employee record management.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Portfolio Website</h3>
+          <p>
+            Responsive portfolio website built using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Student Management System</h3>
+          <p>
+            Spring Boot project integrated with MySQL database.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- CONTACT -->
+
   <section id="contact">
 
     <div class="container">
 
-      <div class="section-title">
+      <div class="section-title reveal">
         <h2>Contact Me</h2>
       </div>
 
       <div class="contact-grid">
 
-        <div class="contact-card">
+        <div class="card contact-card reveal">
 
           <p>
             <i class="fas fa-location-dot"></i>
-            Hanuman Nagar, Andhra Pradesh
+            Andhra Pradesh, India
           </p>
 
           <p>
@@ -187,7 +591,7 @@
 
         </div>
 
-        <div class="contact-form">
+        <div class="card reveal">
 
           <form>
 
@@ -195,7 +599,7 @@
 
             <input type="email" placeholder="Your Email" required>
 
-            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <textarea rows="5" placeholder="Your Message"></textarea>
 
             <button type="submit" class="btn primary-btn">
               Send Message
@@ -212,9 +616,44 @@
   </section>
 
   <!-- FOOTER -->
+
   <footer>
-    <p>© 2025 Dinesh Sigireddy</p>
+    <p>© 2025 Dinesh Sigireddy | All Rights Reserved</p>
   </footer>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    // MOBILE MENU
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // SCROLL REVEAL
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+
+      reveals.forEach((element) => {
+
+        const windowHeight = window.innerHeight;
+        const revealTop = element.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - 100) {
+          element.classList.add("active");
+        }
+
+      });
+
+    });
+
+  </script>
 
 </body>
 
