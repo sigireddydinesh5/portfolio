@@ -1,0 +1,81 @@
+* {
+.skills-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+}
+
+.about-card,
+.skill-card,
+.contact-card,
+.contact-form {
+  padding: 30px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.skill-tags span {
+  background: rgba(34,211,238,0.1);
+  color: var(--primary);
+  padding: 8px 12px;
+  border-radius: 30px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media(max-width:768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 80px;
+    right: -100%;
+    flex-direction: column;
+    background: #0f172a;
+    width: 220px;
+    padding: 20px;
+    transition: 0.3s;
+  }
+
+  nav ul.active {
+    right: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}}
