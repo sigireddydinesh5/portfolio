@@ -1,179 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-     
-  <head>
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dinesh Sigireddy - Full Stack Java Developer Portfolio" />
+
   <title>Dinesh Sigireddy | Portfolio</title>
 
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <div class="container navbar">
-    <div class="logo">Dinesh | Full Stack Java Developer</div>
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
 
-    <nav>
-      <ul id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="menu-btn" id="menuBtn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </div>
-</header>
-
-<section class="hero" id="home">
-  <div class="container hero-content">
-
-    <div class="hero-text reveal">
-      <h1>I'm a <span>Full Stack Java Developer</span></h1>
-
-  <p>
-        I am a passionate and detail-oriented Java Developer with a strong foundation in object-oriented programming, database management, and modern web technologies.
-      </p>
-
-      <div class="btn-group">
-        <a href="assets/Dinesh_Resume.pdf" class="btn primary-btn" download>
-          View Resume
-        </a>
-
-        <a href="#contact" class="btn secondary-btn">
-          Contact Me
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-image reveal">
-      <img src="assets/profile-photo.jpg" alt="Dinesh Sigireddy">
-    </div>
-
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <div class="section-title reveal">
-      <h2>About Me</h2>
-      <p>Passionate fresher with strong Full Stack Java Development skills.</p>
-    </div>
-
-    <div class="about-grid">
-
-      <div class="about-card glass reveal">
-        <i class="fas fa-user-graduate"></i>
-        <h3>Education</h3>
-        <p>Strong academic foundation in programming and software development.</p>
+      <div class="logo">
+        Dinesh | Full Stack Java Developer
       </div>
 
-      <div class="about-card glass reveal">
-        <i class="fas fa-laptop-code"></i>
-        <h3>Completed Training</h3>
-        <p>Completed Full Stack Java Development training at ShiftEdutech.</p>
-      </div>
-
-      <div class="about-card glass reveal">
-        <i class="fas fa-code"></i>
-        <h3>Projects</h3>
-        <p>Built multiple Java desktop and web applications.</p>
-      </div>
+      <nav>
+        <ul id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
     </div>
-  </div>
-</section> 
+  </header>
 
-</div>
-</section>
+  <!-- HERO -->
+  <section class="hero" id="home">
 
-<section id="skills">
-  <div class="container">
+    <div class="container hero-content">
 
-    <div class="section-title reveal">
-      <h2>Technical Skills</h2>
-    </div>
+      <div class="hero-text">
+        <h1>
+          I'm a <span>Full Stack Java Developer</span>
+        </h1>
 
-    <div class="skills-grid">
+        <p>
+          Passionate Java Developer with strong knowledge in Java,
+          Spring Boot, ReactJS, and database management.
+        </p>
 
-      <div class="skill-card glass reveal">
-        <h3>Frontend</h3>
-        <div class="skill-tags">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>ReactJS</span>
+        <div class="btn-group">
+          <a href="#" class="btn primary-btn">View Resume</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
         </div>
       </div>
 
-      <div class="skill-card glass reveal">
-        <h3>Backend</h3>
-        <div class="skill-tags">
-          <span>Core Java</span>
-          <span>JDBC</span>
-          <span>Servlets</span>
-          <span>Spring Boot</span>
+      <div class="hero-image">
+        <img src="assets/profile-photo.jpg" alt="Dinesh">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p>Passionate fresher with strong Full Stack Java Development skills.</p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+          <i class="fas fa-user-graduate"></i>
+          <h3>Education</h3>
+          <p>Strong academic foundation in programming and software development.</p>
         </div>
-      </div>
 
-      <div class="skill-card glass reveal">
-        <h3>Database</h3>
-        <div class="skill-tags">
-          <span>MySQL</span>
-          <span>Oracle</span>
+        <div class="about-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Training</h3>
+          <p>Completed Full Stack Java Development training at ShiftEdutech.</p>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
+        <div class="about-card">
+          <i class="fas fa-code"></i>
+          <h3>Projects</h3>
+          <p>Built multiple Java desktop and web applications.</p>
+        </div>
 
-<section id="contact">
-  <div class="container">
-
-    <div class="section-title reveal">
-      <h2>Contact Me</h2>
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-card glass reveal">
-        <p><i class="fas fa-location-dot"></i> Hanuman Nagar, Andhra Pradesh</p>
-        <p><i class="fas fa-phone"></i> +91 9391511599</p>
-        <p><i class="fas fa-envelope"></i> sigireddydinesh5@gmail.com</p>
-      </div>
-
-      <div class="contact-form glass reveal">
-        <form id="contactForm">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn primary-btn">Send Message</button>
-        </form>
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© <span id="year"></span> Rama Chandra Rao Polamarasetti</p>
-</footer>
+  <!-- SKILLS -->
+  <section id="skills">
 
-<script src="script.js"></script>
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Technical Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>Frontend</h3>
+
+          <div class="skill-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>ReactJS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Backend</h3>
+
+          <div class="skill-tags">
+            <span>Core Java</span>
+            <span>JDBC</span>
+            <span>Servlets</span>
+            <span>Spring Boot</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Database</h3>
+
+          <div class="skill-tags">
+            <span>MySQL</span>
+            <span>Oracle</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Me</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <p>
+            <i class="fas fa-location-dot"></i>
+            Hanuman Nagar, Andhra Pradesh
+          </p>
+
+          <p>
+            <i class="fas fa-phone"></i>
+            +91 9391511599
+          </p>
+
+          <p>
+            <i class="fas fa-envelope"></i>
+            sigireddydinesh5@gmail.com
+          </p>
+
+        </div>
+
+        <div class="contact-form">
+
+          <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn primary-btn">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Dinesh Sigireddy</p>
+  </footer>
+
 </body>
+
 </html>
