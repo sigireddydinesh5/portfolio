@@ -1,34 +1,51 @@
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
+// =========================
+// MOBILE MENU
+// =========================
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-const reveals = document.querySelectorAll('.reveal');
-
-function revealSections() {
-  reveals.forEach(section => {
-    const windowHeight = window.innerHeight;
-    const revealTop = section.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (revealTop < windowHeight - revealPoint) {
-      section.classList.add('active');
-    }
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
   });
 }
 
-window.addEventListener('scroll', revealSections);
+// =========================
+// SCROLL REVEAL ANIMATION
+// =========================
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealSections() {
+
+  reveals.forEach((element) => {
+
+    const windowHeight = window.innerHeight;
+    const revealTop = element.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      element.classList.add("active");
+    }
+
+  });
+
+}
+
+window.addEventListener("scroll", revealSections);
+
+// Run once on page load
 revealSections();
 
-const year = document.getElementById('year');
-year.textContent = new Date().getFullYear();
+// =========================
+// DYNAMIC FOOTER YEAR
+// =========================
 
-const contactForm = document.getElementById('contactForm');
+const year = new Date().getFullYear();
 
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Message sent successfully!');
-  contactForm.reset();
-});
+const footer = document.querySelector("footer p");
+
+if (footer) {
+  footer.innerHTML = `© ${year} Dinesh Sigireddy | All Rights Reserved`;
+}
